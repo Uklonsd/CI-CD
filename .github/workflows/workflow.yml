@@ -1,4 +1,5 @@
 name: CI
+run-name: ${{ github.actor }} - ${{ github.ref_name }}
 
 on:
   pull_request:
@@ -18,6 +19,3 @@ jobs:
       
       - name: Show event name
         run: echo "Triggered by event ${{ github.event_name }}" 
-
-      - name: Show actor name
-        run: echo "This workflow was triggered by ${{ github.actor }}"
